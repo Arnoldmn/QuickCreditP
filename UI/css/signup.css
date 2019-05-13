@@ -6,7 +6,7 @@ body {
   background-color: #f1f1f1;
   background-size: cover;
 }
-.mainheader nav{
+.mainheader nav {
   font-size: 20px;
   text-decoration: none;
   padding-top: 30px;
@@ -14,67 +14,64 @@ body {
   height: 120px;
   color: #ffff;
 }
-a{
+a {
   color: #ffff;
   text-decoration: none;
 }
-.mainheader nav ul{
-  text-align: center;  
+.mainheader nav ul {
+  text-align: center;
   list-style-type: none;
-  
 }
-.mainheader nav ul li{
+.mainheader nav ul li {
   float: right;
   display: inline-block;
 }
-.mainheader nav a:link{
+.mainheader nav a:link {
   color: #ffffff;
   display: inline-block;
   padding: 10px 25px;
   height: 50px;
   padding-top: 10px;
 }
-h1 { 
+h1 {
   font-size: 50px;
   margin-left: 25px;
   margin-top: 10px;
   color: #acacac;
   float: left;
   display: inline-block;
-  
 }
 
-h1 a{
+h1 a {
   text-decoration: none;
   color: #ffffff;
 }
-h1 a span{
+h1 a span {
   float: left;
   float: right;
   margin-right: 0;
   margin-top: 10px;
   color: rgb(128, 36, 0);
 }
-p a{
+p a {
   color: #000000;
 }
 #regForm {
   background-color: #f1f1f1;
   margin: 30px auto;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 30px;
   width: 37%;
   min-width: 300px;
 }
- .regform{
+.regform {
   background-color: #f1f1f1;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 30px auto;
   padding: 30px;
   width: 40%;
- }
+}
 h1 {
-  
 }
 
 input {
@@ -84,7 +81,7 @@ input {
   border: none;
   border-bottom: 2px solid #acacac;
 }
-select{
+select {
   text-align: center;
   padding: 10px;
   font-size: 17px;
@@ -94,12 +91,12 @@ select{
   margin-top: 5px;
 }
 
-input[type=date] {
+input[type="date"] {
   color: #acacac;
   text-transform: uppercase;
   font-size: 20px;
   white-space: initial;
-  height: 45px;;
+  height: 45px;
   width: 100%;
   border: none;
   border-bottom: 2px solid #acacac;
@@ -111,11 +108,11 @@ input.invalid {
 .tab {
   display: none;
   font-size: 17px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 button {
-  background-color:  rgb(36, 88, 138);
+  background-color: rgb(36, 88, 138);
   color: #ffffff;
   font-weight: bold;
   border: none;
@@ -145,25 +142,31 @@ button:hover {
 .step.active {
   opacity: 1;
 }
-
+textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  border: none;
+  border-bottom: 2px solid #acacac;
+}
 
 .step.finish {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
-.body{
+.body {
   width: 80%;
   margin: 0 auto;
 }
-.mainFooter{
+.mainFooter {
   width: 100%;
   float: left;
   clear: both;
   font-size: 20px;
   height: 150px;
-  background-color:  rgb(36, 88, 138);
+  background-color: rgb(36, 88, 138);
   margin: 2% 0;
 }
-.mainFooter p{
+.mainFooter p {
   padding-top: 30px;
   text-align: center;
   width: 92%;
@@ -171,8 +174,8 @@ button:hover {
   color: #ffffff;
 }
 
-@media only screen and (min-width: 150px) and (max-width: 600px){
-  .body{
+@media only screen and (min-width: 150px) and (max-width: 600px) {
+  .body {
     width: 100%;
     font-weight: 90%;
   }
@@ -180,30 +183,34 @@ button:hover {
     height: 350px;
   }
 
-  .mainheader nav ul{
+  .mainheader nav ul {
     padding-left: 0;
   }
-  .mainheader nav ul li{
+  .mainheader nav ul li {
     width: 100%;
     text-align: center;
   }
-  
-  .column, .rightContent, .leftContent, .column1, .regform, #regForm{
-   float: left;
-   width: 94%;
-   margin-left: 2%;
-   margin-right: 2%;
-   padding: 2% 3%;
-    
+
+  .column,
+  .rightContent,
+  .leftContent,
+  .column1,
+  .regform,
+  #regForm {
+    float: left;
+    width: 94%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 2% 3%;
   }
-  img{
+  img {
     width: 94%;
   }
 
-  .rightContent caption{
-    font-size: 14px; 
+  .rightContent caption {
+    font-size: 14px;
   }
-  .leftContent img{
+  .leftContent img {
     width: 94%;
   }
 }
