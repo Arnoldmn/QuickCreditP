@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  background-size: cover;
+}
+.mainheader nav{
+  font-size: 20px;
+  text-decoration: none;
+  padding-top: 30px;
+  background-color: rgb(36, 88, 138);
+  height: 120px;
+  color: #ffff;
+}
+a{
+  color: #ffff;
+  text-decoration: none;
+}
+.mainheader nav ul{
+  text-align: center;  
+  list-style-type: none;
+  
+}
+.mainheader nav ul li{
+  float: right;
+  display: inline-block;
+}
+.mainheader nav a:link{
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 25px;
+  height: 50px;
+  padding-top: 10px;
+}
+h1 { 
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: 10px;
+  color: #acacac;
+  float: left;
+  display: inline-block;
+  
+}
+
+h1 a{
+  text-decoration: none;
+  color: #ffffff;
+}
+h1 a span{
+  float: left;
+  float: right;
+  margin-right: 0;
+  margin-top: 10px;
+  color: rgb(128, 36, 0);
+}
+p a{
+  color: #000000;
+}
+#regForm {
+  background-color: #f1f1f1;
+  margin: 30px auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  
+  padding: 30px;
+  width: 37%;
+  min-width: 300px;
+}
+ .regform{
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 30px auto;
+  padding: 30px;
+  width: 40%;
+ }
+h1 {
+  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  border: none;
+  border-bottom: 2px solid #acacac;
+}
+select{
+  text-align: center;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  border-bottom: 2px solid #acacac;
+  width: 100%;
+  margin-top: 5px;
+}
+
+input[type=date] {
+  color: #acacac;
+  text-transform: uppercase;
+  font-size: 20px;
+  white-space: initial;
+  height: 45px;;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #acacac;
+}
+input.invalid {
+  background-color: #ffdddd;
+}
+
+.tab {
+  display: none;
+  font-size: 17px;
+  font-weight: bold; 
+}
+
+button {
+  background-color:  rgb(36, 88, 138);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+
+.step.finish {
+  background-color: #4CAF50;
+}
+.body{
+  width: 80%;
+  margin: 0 auto;
+}
+.mainFooter{
+  width: 100%;
+  float: left;
+  clear: both;
+  font-size: 20px;
+  height: 150px;
+  background-color:  rgb(36, 88, 138);
+  margin: 2% 0;
+}
+.mainFooter p{
+  padding-top: 30px;
+  text-align: center;
+  width: 92%;
+  margin: 10px auto;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 600px){
+  .body{
+    width: 100%;
+    font-weight: 90%;
+  }
+  .mainheader nav {
+    height: 350px;
+  }
+
+  .mainheader nav ul{
+    padding-left: 0;
+  }
+  .mainheader nav ul li{
+    width: 100%;
+    text-align: center;
+  }
+  
+  .column, .rightContent, .leftContent, .column1, .regform, #regForm{
+   float: left;
+   width: 94%;
+   margin-left: 2%;
+   margin-right: 2%;
+   padding: 2% 3%;
+    
+  }
+  img{
+    width: 94%;
+  }
+
+  .rightContent caption{
+    font-size: 14px; 
+  }
+  .leftContent img{
+    width: 94%;
+  }
+}
