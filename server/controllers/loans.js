@@ -57,6 +57,28 @@ class LoansControllers {
 
     res.status(200).json(resp);
   }
+  /**
+   *
+   * @param {*} req
+   * @param {*} res
+   * specific loan
+   */
+
+  singleLoan(req, res) {
+    const loanDetails = loans.find(
+      loan => loan.id === parseInt(req.params.id, 10)
+    );
+    if (!loanDetails) {
+      return res.status(401).json({
+        status: 401,
+        error: "Loan application not found"
+      });
+    }
+    res.status(200).json({
+      status: 200,
+      data: loanDetails
+    });
+  }
 }
 
 const loansControllers = new LoansControllers();
