@@ -1,0 +1,340 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "quickCredit",
+    "description": "# Introduction\nThis application should allow user to borrow money from our services at an affordable fee that is competitive Users of the said applocation should be able to repay their loans a given period of time.\n\n# Overview\nLoan lending web application for andela bootcamp test \nThis application should allow user to borrow money from our services at an affordable fee that is competitive Users of the said applocation should be able to repay their loans a given period of time.\n\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\n400\n401\n403\n404\n500\n\n\n# Rate limit\nIs there a limit to the number of requests an user can send? No",
+    "contact": {}
+  },
+  "host": "localhost:7000",
+  "basePath": "/api/v1",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/loans": {
+      "get": {
+        "description": "All loans application",
+        "summary": "localhost:7000/api/v1/loans",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LoansGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/loans:id": {
+      "get": {
+        "description": "One loan should be displayed base on id",
+        "summary": "localhost:7000/api/v1/loans:id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LoansIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/unpaid/loans": {
+      "get": {
+        "description": "All unpaid loans should be seen by admin",
+        "summary": "localhost:7000/api/v1/unpaid/loans",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "UnpaidLoansGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/repaid/loans": {
+      "get": {
+        "description": "All repaid loans to be displayed ",
+        "summary": "localhost:7000/api/v1/repaid/loans",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "RepaidLoansGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/loans/repayment": {
+      "get": {
+        "description": "Display all repaid loans",
+        "summary": "localhost:7000/api/v1/loans/repayment",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LoansRepaymentGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/loans/apply": {
+      "post": {
+        "description": "A user can apply for a loan",
+        "summary": "localhost:7000/api/v1/loans/apply",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LoansApplyPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/:id/loans": {
+      "post": {
+        "description": "Admin will post loan repayment in favor of a user",
+        "summary": "localhost:7000/api/v1/:id/loans",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "IdLoansPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/loans/:id": {
+      "put": {
+        "description": "Admin will updat loan repayment",
+        "summary": "localhost:7000/api/v1/loans/:id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LoansIdPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/loans/:": {
+      "patch": {
+        "description": "Admin will patch a single loan ",
+        "summary": "localhost:7000/api/v1/loans/:",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LoansPatch",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "description": "All created users of the application",
+        "summary": "localhost:7000/api/v1/users",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "UsersGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/auth/signup": {
+      "post": {
+        "description": "A user will have to create an account to be given access",
+        "summary": "localhost:7000/api/v1/auth/signup",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "AuthSignupPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/auth/signin": {
+      "post": {
+        "description": "A user will need to login to access his/her account",
+        "summary": "localhost:7000/api/v1/auth/signin",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "AuthSigninPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/loans/history": {
+      "get": {
+        "description": "A user will view loan history",
+        "summary": "localhost:7000/api/v1/loans/history",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "LoansHistoryGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
