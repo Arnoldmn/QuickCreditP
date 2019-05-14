@@ -139,3 +139,6 @@ class UsersController {
 
 const usersController = new UsersController();
 export default usersController;
+
+const usersController = new UsersController();
+export default usersController;
