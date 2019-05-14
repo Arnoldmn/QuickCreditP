@@ -105,6 +105,32 @@ class LoansControllers {
       loans
     });
   }
+
+  /**
+   *
+   * @param {*} req
+   * @param {*} res
+   * fully settled loans
+   */
+  fullySettledLoans(req, res) {
+    const statusReq = req.query.status;
+    const repaidReq = req.query.statusReq;
+    const info = loans.find(
+      loan => loan.status === statusReq && loan.repaid === repaidReq
+    );
+    if (!info) {
+      return res.status(404).json({
+        status: 404,
+        data: "Loan not found"
+      });
+    }
+
+    return res.status(201).json({
+      status: 201,
+      data: "loan fully settled",
+      loans
+    });
+  }
 }
 
 const loansControllers = new LoansControllers();
