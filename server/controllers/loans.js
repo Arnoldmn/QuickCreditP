@@ -79,6 +79,32 @@ class LoansControllers {
       data: loanDetails
     });
   }
+  /**
+   *
+   * @param {*} req
+   * @param {*} res
+   * unsettled loans
+   */
+
+  unSettledLoan(req, res) {
+    const statusReq = req.query.status;
+    const repaidReq = req.query.repaid;
+    const info = loans.find(
+      loan => loan.status === statusReq && loan.repaid === repaidReq
+    );
+    if (!info) {
+      return res.status(404).json({
+        status: 404,
+        data: "Loan already settled"
+      });
+    }
+
+    return res.status(200).json({
+      status: 200,
+      data: "Unsettled loan info",
+      loans
+    });
+  }
 }
 
 const loansControllers = new LoansControllers();
