@@ -1,0 +1,473 @@
+{
+	"variables": [],
+	"info": {
+		"name": "quickCredit",
+		"_postman_id": "28a956f0-d4b2-4b9f-a610-530a85144b8e",
+		"description": "# Introduction\nThis application should allow user to borrow money from our services at an affordable fee that is competitive Users of the said applocation should be able to repay their loans a given period of time.\n\n# Overview\nLoan lending web application for andela bootcamp test \nThis application should allow user to borrow money from our services at an affordable fee that is competitive Users of the said applocation should be able to repay their loans a given period of time.\n\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\n400\n401\n403\n404\n500\n\n\n# Rate limit\nIs there a limit to the number of requests an user can send? No",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:7000/api/v1/loans",
+			"request": {
+				"url": "localhost:7000/api/v1/loans",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "All loans application"
+			},
+			"response": [
+				{
+					"id": "06bb6e44-2ad0-4509-ac59-ab31bf32be4a",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/loans",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/loans:id",
+			"request": {
+				"url": "localhost:7000/api/v1/loans:id",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "One loan should be displayed base on id"
+			},
+			"response": [
+				{
+					"id": "c76e2c88-abc9-413e-9ea5-668efec9bad5",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/loans:id",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/unpaid/loans",
+			"request": {
+				"url": "localhost:7000/api/v1/unpaid/loans",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "All unpaid loans should be seen by admin"
+			},
+			"response": [
+				{
+					"id": "25d4e49a-7b9d-44d6-befe-139e5d33db1a",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/unpaid/loans",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/repaid/loans",
+			"request": {
+				"url": "localhost:7000/api/v1/repaid/loans",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "All repaid loans to be displayed "
+			},
+			"response": [
+				{
+					"id": "7ab6ad71-6dae-44aa-9da7-c34aa37a359c",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/repaid/loans",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/loans/repayment",
+			"request": {
+				"url": "localhost:7000/api/v1/loans/repayment",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Display all repaid loans"
+			},
+			"response": [
+				{
+					"id": "1dba6e26-f8bb-41d2-87e6-aff88f90dbaf",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/loans/repayment",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/loans/apply",
+			"request": {
+				"url": "localhost:7000/api/v1/loans/apply",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "A user can apply for a loan"
+			},
+			"response": [
+				{
+					"id": "822c07b4-477b-4c74-87bf-fb7550e8bc8f",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/loans/apply",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/:id/loans",
+			"request": {
+				"url": "localhost:7000/api/v1/:id/loans",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Admin will post loan repayment in favor of a user"
+			},
+			"response": [
+				{
+					"id": "529eeeaa-b366-47ec-8247-44d9023bbbba",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/:id/loans",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/loans/:id",
+			"request": {
+				"url": "localhost:7000/api/v1/loans/:id",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Admin will updat loan repayment"
+			},
+			"response": [
+				{
+					"id": "1966fef0-825f-4e77-9e8e-6705801368f3",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/loans/:id",
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/loans/:",
+			"request": {
+				"url": "localhost:7000/api/v1/loans/:",
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Admin will patch a single loan "
+			},
+			"response": [
+				{
+					"id": "067aa68f-e3bf-4e74-b611-582cc059536a",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/loans/:",
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/users",
+			"request": {
+				"url": "localhost:7000/api/v1/users",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "All created users of the application"
+			},
+			"response": [
+				{
+					"id": "b332a1e0-e43f-49fc-8d1c-fbb01aff9251",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/users",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/auth/signup",
+			"request": {
+				"url": "localhost:7000/api/v1/auth/signup",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "A user will have to create an account to be given access"
+			},
+			"response": [
+				{
+					"id": "663cd712-ea91-4a3e-9c3f-2ad3979481e4",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/auth/signup",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/auth/signin",
+			"request": {
+				"url": "localhost:7000/api/v1/auth/signin",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "A user will need to login to access his/her account"
+			},
+			"response": [
+				{
+					"id": "9b8c7f85-992c-4157-826b-ef83652e1829",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/auth/signin",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/loans/history",
+			"request": {
+				"url": "localhost:7000/api/v1/loans/history",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "A user will view loan history"
+			},
+			"response": [
+				{
+					"id": "59697fcb-f22f-4bba-9e09-43aa48a62ac4",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/loans/history",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:7000/api/v1/loans/history copy",
+			"request": {
+				"url": "localhost:7000/api/v1/loans/history",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "A user will view loan history"
+			},
+			"response": [
+				{
+					"id": "0a2f7eb3-d032-4671-873a-1c0df36f0f3c",
+					"name": "Default",
+					"originalRequest": {
+						"url": "localhost:7000/api/v1/loans/history",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}
