@@ -162,6 +162,50 @@ class LoansControllers {
       data: newRepayment
     });
   }
+  /**
+   *
+   * @param {*} res
+   * @param {*} req
+   * Loan history endpoint
+   */
+  loanHistory(req, res) {
+    const loanRepayment = [loans];
+
+    const loanHistory = [];
+    loanRepayment.forEach(loan => {
+      if (loans.loanId === parseInt(req.params.id, 10)) {
+        loanHistory.push(loans);
+      }
+    });
+    res.status(200).json({
+      status: 200,
+      data: loanHistory
+    });
+  }
+  /**
+   *
+   * @param {*} res
+   * @param {*} req
+   * Loan can be approved or rejected
+   */
+  loanStatus(req, res) {
+    const { loanApplication } = req.params;
+
+    let loanIndex = loans.find(
+      loan => loan.loanApplication === loanApplication
+    );
+    if (loanIndex < 0) {
+      return res.status(404).json({
+        status: 404,
+        data: "loan is not valid"
+      });
+    }
+    loanIndex = req.body.status;
+    res.status(200).json({
+      status: 200,
+      data: loanIndex
+    });
+  }
 }
 
 const loansControllers = new LoansControllers();
