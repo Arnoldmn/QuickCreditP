@@ -72,6 +72,48 @@ class UsersController {
       }
     );
   }
+  signin(req, res) {
+    const { email, password } = req.body;
+    const user = users.find(
+      user => user.email === email && user.password === password
+    );
+    if (!user) {
+      res.status(401).json({
+        status: 401,
+        token: null,
+        auth: false,
+        error: "invalid username or password"
+      });
+    }
+
+    jwt.sign(
+      {
+        userId: users.id,
+        email: users.email,
+        password: users.password
+      },
+      "secretkey",
+      (error, token) => {
+        if (error) {
+          return res.json({
+            status: 401,
+            data: "user doesnt exit"
+          });
+        }
+        user.token = token;
+        const resp = {
+          status: 201,
+          data: {
+            token,
+            userId: users.id,
+            firstName: users.firstName,
+            lastname: users.lastName
+          }
+        };
+        res.status(201).json(resp);
+      }
+    );
+  }
 }
 
 const usersController = new UsersController();
