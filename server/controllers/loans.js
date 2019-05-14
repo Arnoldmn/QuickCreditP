@@ -131,6 +131,37 @@ class LoansControllers {
       loans
     });
   }
+  /**
+   *
+   * @param {*} res
+   * @param {*} req
+   * Loan repayment endpoint
+   */
+  loanRepayment(req, res) {
+    const singleLoan = loans.find(
+      loan => loan.id === parseInt(req.params.id, 10)
+    );
+    if (!singleLoan)
+      return res.status(40).json({
+        status: 404,
+        error: "Loan not found"
+      });
+    const newRepayment = {
+      id: repayments.length + 1,
+      loanId: singleLoan.id,
+      createdOn: new Date(),
+      amount: singleLoan.amount,
+      mothlyInstallment: singleLoan.paymentInstallment,
+      paidAmount: req.body.paidAmount,
+      balance: singleLoan.balance,
+      userData: req.userData
+    };
+    repayments.push(newRepayment);
+    res.status(202).json({
+      status: 202,
+      data: newRepayment
+    });
+  }
 }
 
 const loansControllers = new LoansControllers();
