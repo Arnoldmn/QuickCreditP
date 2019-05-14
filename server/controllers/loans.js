@@ -142,7 +142,7 @@ class LoansControllers {
       loan => loan.id === parseInt(req.params.id, 10)
     );
     if (!singleLoan)
-      return res.status(40).json({
+      return res.status(404).json({
         status: 404,
         error: "Loan not found"
       });
