@@ -7,22 +7,13 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha ./api/tests/*.js --exit --require esm",
+    "test": "mocha ./server/tests/*.js --exit --require esm",
     "transpile": "babel server --out-dir dist",
     "build": "babel api --out-dir build",
-    "dev-start": "babel-watch ./api/server.js",
-    "start": "nodemon --exec babel-node ./api/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mumbere7/quickCredit.git"
+    "dev-start": "babel-watch ./server/server.js",
+    "start": "nodemon --exec babel-node ./server/server.js"
   },
   "author": "Mumbere7",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Mumbere7/quickCredit/issues"
-  },
-  "homepage": "https://github.com/Mumbere7/quickCredit#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
