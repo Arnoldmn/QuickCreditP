@@ -114,6 +114,27 @@ class UsersController {
       }
     );
   }
+  UserIsVerified(req, res) {
+    const user = users.find(user => user.email === req.params.email);
+    if (!user) {
+      return res.json({
+        status: 404,
+        error: "User not found"
+      });
+    }
+    singleUser.status = req.body.status;
+    const resp = {
+      email: users.email,
+      firstname: users.firstname,
+      lastname: users.lastname,
+      address: users.address,
+      status: users.status
+    };
+    return res.json({
+      status: 200,
+      data: resp
+    });
+  }
 }
 
 const usersController = new UsersController();
