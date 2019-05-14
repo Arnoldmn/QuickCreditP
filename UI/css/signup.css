@@ -18,6 +18,9 @@ a {
   color: #ffff;
   text-decoration: none;
 }
+a:hover {
+  color: rgb(250, 226, 10);
+}
 .mainheader nav ul {
   text-align: center;
   list-style-type: none;
