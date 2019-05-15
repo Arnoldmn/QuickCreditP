@@ -280,16 +280,22 @@ table .button-deny {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 /*------Media queries for responsive diesign-----*/
-
-@media only screen and (min-width: 150px) and (max-width: 600px) {
+@media only screen and (min-width: 150px) and (max-width: 900px) {
   .body {
-    width: 100%;
+    max-width: 100%;
     font-weight: 90%;
   }
   .mainheader nav {
-    height: 300px;
+    max-width: 100%;
+    height: 200px;
   }
-
+  .leftContent img {
+    margin-top: 5px;
+    height: 150px;
+  }
+  .rightContent img {
+    width: 100%;
+  }
   .mainheader nav ul {
     padding-left: 0;
   }
@@ -297,25 +303,29 @@ table .button-deny {
     width: 100%;
     text-align: center;
   }
+  a:hover {
+    color: rgb(250, 226, 10);
+  }
+  .how-heading {
+    margin: 5px;
+  }
 
   .rightContent,
   .leftContent,
   .column1,
   .column {
     float: left;
-    width: 94%;
+    width: 100%;
     margin-left: 2%;
     margin-right: 2%;
     padding: 2% 3%;
-  }
-  img {
-    width: 94%;
   }
 
   .rightContent caption {
     font-size: 14px;
   }
-  .leftContent img {
-    width: 94%;
+
+  .mainFooter {
+    width: 100%;
   }
 }
