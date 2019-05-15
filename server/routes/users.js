@@ -8,8 +8,8 @@ const router = express.Router();
 /**
  * Users routes
  */
-router.get("/api/v1/users", authorize, usersController.getAllUsers);
-router.get("api/v1/loans/hostory", authorize, loansController.loanHistory);
+router.get("/api/v1/users", usersController.getAllUsers);
+router.get("api/v1/loans/history", authorize, loansController.loanHistory);
 router.post("/api/v1/auth/signup", usersController.signup);
 router.post("/api/v1/auth/signin", usersController.signin);
 router.put(

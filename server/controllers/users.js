@@ -38,31 +38,41 @@ class UsersController {
     user.status = "pending" || "approved";
     user.isAdmin = true || false;
     users.push(user);
-    (error, token) => {
-      if (error) {
-        return res.status(401).json({
-          status: 401,
-          data: "user already exits"
-        });
-      }
-      const resp = {
-        status: 200,
-        data: {
-          token: user.token,
-          id: user.id,
-          email: user.email,
-          firstname: user.firstname,
-          lastname: user.lastname,
-          password: user.password,
-          address: user.address,
-          status: user.status === "rejected" || "approved",
-          isAdmin: user.isAdmin === true || false
+    jwt.sign(
+      {
+        userId: users.id,
+        email: users.email,
+        password: users.password
+      },
+      "secretkey",
+      (error, token) => {
+        if (error) {
+          return res.status(401).json({
+            status: 401,
+            data: "user already exits"
+          });
         }
-      };
+        user.token = token;
+        const resp = {
+          status: 200,
+          data: {
+            token: user.token,
+            id: user.id,
+            email: user.email,
+            firstname: user.firstname,
+            lastname: user.lastname,
+            password: user.password,
+            address: user.address,
+            status: user.status === "rejected" || "approved",
+            isAdmin: user.isAdmin === true || false
+          }
+        };
 
-      res.status(200).json(resp);
-    };
+        res.status(200).json(resp);
+      }
+    );
   }
+
   signin(req, res) {
     const { email, password } = req.body;
     const user = users.find(

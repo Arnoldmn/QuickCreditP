@@ -171,7 +171,32 @@ class LoansController {
       data: newRepayment
     });
   }
+  updatedLoanRepayment() {
+    const id = parseInt(req.params.id, 10);
+    let loanFound;
+    let loanIndex;
 
+    loans.map((loan, index) => {
+      if (loan.id === id) {
+        loanFound = loan;
+        loanIndex = index;
+      }
+    });
+
+    const updatedLoan = {
+      id: loanFound.id,
+      createdOn: req.body.createdOn || loanFound.createdOn,
+      amount: req.body.amount || loanFound.amount,
+      balance: req.body.balance || loanFound.balance
+    };
+    loans.splice(loanIndex, 1, updatedLoan);
+
+    return res.status(201).send({
+      status: 201,
+      data: "Loan updated successfull",
+      updatedLoan
+    });
+  }
   /**
    *
    * @param {*} res

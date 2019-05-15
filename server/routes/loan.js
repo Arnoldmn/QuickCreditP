@@ -20,7 +20,12 @@ router.get(
 router.get("/api/v1/loans/repayment", authorize, loansController.loanHistory);
 router.post("/api/v1/loans/apply", authorize, loansController.applyLoan);
 router.post("/api/v1/loans/:id/repayment", loansController.loanRepayment);
+//router.post("/api/v1/loans/:id")
 router.put("/api/v1/loans/:id", loansController.loanStatus);
-router.patch("/api/v1/loans/:id", authorize, loansController.singleLoan);
+router.patch(
+  "/api/v1/loans/:id",
+  authorize,
+  loansController.updatedLoanRepayment
+);
 
 export default router;
