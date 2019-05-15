@@ -1,14 +1,17 @@
 import jwt from "jsonwebtoken";
-module.exports = (req, res, next) => {
-  const h
-  try {
-    const decoded = jwt.verify(req.body.token, "secret");
-    req.userData = decoded;
+const checkToken = (req, res, next) => {
+  const header = req.headers["authorization"];
+
+  if (typeof header !== "undefined") {
+    const bearer = header.split(" ");
+    const token = bearer[1];
+
+    req.token = token;
     next();
-  } catch (err) {
-    return res.status(401).json({
-      status: 401,
-      data: "Authentication failed"
-    });
+  } else {
+    //If header is undefined return Forbidden (403)
+    res.sendStatus(403);
   }
 };
+
+export default checkToken;

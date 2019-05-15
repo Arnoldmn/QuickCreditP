@@ -205,16 +205,11 @@ class LoansController {
    */
   loanHistory(req, res) {
     const loanRepayment = [loans];
+    const lona_history = loans.filter(email => email);
 
-    const loanHistory = [];
-    loanRepayment.forEach(loan => {
-      if (loans.loanId === parseInt(req.params.id, 10)) {
-        loanHistory.push(loans);
-      }
-    });
     res.status(200).json({
       status: 200,
-      data: loanHistory
+      data: loan
     });
   }
   /**
