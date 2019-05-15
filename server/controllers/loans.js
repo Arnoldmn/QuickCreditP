@@ -1,16 +1,11 @@
-/* eslint-disable no-undef */
-/* eslint-disable consistent-return */
-/* eslint-disable no-use-before-define */
-/* eslint-disable import/no-named-as-default-member */
-/* eslint-disable class-methods-use-this */
-import users from "../db/users";
-import { loans, repayments } from "../db/loans";
+import users from '../db/users';
+import { loans, repayments } from '../db/loans';
 
 class LoansController {
   getAllLoans(req, res) {
     res.status(200).json({
       status: 200,
-      data: loans
+      data: loans,
     });
   }
 
@@ -30,7 +25,7 @@ class LoansController {
       amount,
       installment,
       balance,
-      interest
+      interest,
     } = req.body;
     const loanApplicant = users.find(_user => _user.userId === req.body.userId);
 
@@ -38,7 +33,7 @@ class LoansController {
     loan.loanId = loans.id;
     loan.email = email;
     loan.createdOn = new Date();
-    loan.status = status === "rejected" || "approved";
+    loan.status = status === 'rejected' || 'approved';
     loan.repaid = parseFloat(repaid);
     loan.tenor = parseFloat(tenor);
     loan.amount = parseFloat(amount);
@@ -59,8 +54,8 @@ class LoansController {
         amount: parseFloat(loans.amount),
         installment: parseFloat(loans.installment),
         balance: parseFloat(loans.balance),
-        interest: parseFloat(loans.interest)
-      }
+        interest: parseFloat(loans.interest),
+      },
     };
 
     res.status(200).json(resp);
@@ -75,17 +70,17 @@ class LoansController {
 
   singleLoan(req, res) {
     const loanDetails = loans.find(
-      loan => loan.id === parseInt(req.params.id, 10)
+      loan => loan.id === parseInt(req.params.id, 10),
     );
     if (!loanDetails) {
       return res.status(404).json({
         status: 404,
-        error: "Loan application not found"
+        error: 'Loan application not found',
       });
     }
     res.status(200).json({
       status: 200,
-      data: loanDetails
+      data: loanDetails,
     });
   }
 
@@ -100,21 +95,22 @@ class LoansController {
     const statusReq = req.query.status;
     const repaidReq = req.query.repaid;
     const info = loans.find(
-      loan => loan.status === statusReq && loan.repaid === repaidReq
+      loan => loan.status === statusReq && loan.repaid === repaidReq,
     );
     if (!info) {
       return res.status(404).json({
         status: 404,
-        data: "Loan already settled"
+        data: 'Loan already settled',
       });
     }
 
     return res.status(200).json({
       status: 200,
-      data: "Unsettled loan info",
-      loans
+      data: 'Unsettled loan info',
+      loans,
     });
   }
+
   /**
    *
    * @param {*} req
@@ -125,21 +121,22 @@ class LoansController {
     const statusReq = req.query.status;
     const repaidReq = req.query.statusReq;
     const info = loans.find(
-      loan => loan.status === statusReq && loan.repaid === repaidReq
+      loan => loan.status === statusReq && loan.repaid === repaidReq,
     );
     if (!info) {
       return res.status(404).json({
         status: 404,
-        data: "Loan not found"
+        data: 'Loan not found',
       });
     }
 
     return res.status(200).json({
       status: 200,
-      data: "loan fully settled",
-      loans
+      data: 'loan fully settled',
+      loans,
     });
   }
+
   /**
    *
    * @param {*} res
@@ -148,13 +145,14 @@ class LoansController {
    */
   loanRepayment(req, res) {
     const singleLoan = loans.find(
-      loan => loan.id === parseInt(req.params.id, 10)
+      loan => loan.id === parseInt(req.params.id, 10),
     );
-    if (!singleLoan)
+    if (!singleLoan) {
       return res.status(404).json({
         status: 404,
         error: "Loan not found"
       });
+    }
     const newRepayment = {
       id: repayments.length + 1,
       loanId: singleLoan.id,
@@ -163,14 +161,15 @@ class LoansController {
       mothlyInstallment: singleLoan.paymentInstallment,
       paidAmount: req.body.paidAmount,
       balance: singleLoan.balance,
-      userData: req.userData
+      userData: req.userData,
     };
     repayments.push(newRepayment);
     res.status(200).json({
       status: 200,
-      data: newRepayment
+      data: newRepayment,
     });
   }
+
   updatedLoanRepayment() {
     const id = parseInt(req.params.id, 10);
     let loanFound;
@@ -187,16 +186,17 @@ class LoansController {
       id: loanFound.id,
       createdOn: req.body.createdOn || loanFound.createdOn,
       amount: req.body.amount || loanFound.amount,
-      balance: req.body.balance || loanFound.balance
+      balance: req.body.balance || loanFound.balance,
     };
     loans.splice(loanIndex, 1, updatedLoan);
 
     return res.status(201).send({
       status: 201,
-      data: "Loan updated successfull",
-      updatedLoan
+      data: 'Loan updated successfully',
+      updatedLoan,
     });
   }
+
   /**
    *
    * @param {*} res
@@ -209,9 +209,10 @@ class LoansController {
 
     res.status(200).json({
       status: 200,
-      data: loan
+      data: loan,
     });
   }
+
   /**
    *
    * @param {*} res
@@ -222,18 +223,18 @@ class LoansController {
     const { loanApplication } = req.params;
 
     let loanIndex = loans.find(
-      loan => loan.loanApplication === loanApplication
+      loan => loan.loanApplication === loanApplication,
     );
     if (loanIndex < 0) {
       return res.status(403).json({
         status: 403,
-        data: "loan is not valid"
+        data: 'loan is not valid',
       });
     }
     loanIndex = req.body.status;
     res.status(200).json({
       status: 200,
-      data: loanIndex
+      data: loanIndex,
     });
   }
 }

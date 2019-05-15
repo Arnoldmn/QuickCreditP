@@ -1,17 +1,24 @@
-import jwt from "jsonwebtoken";
-const checkToken = (req, res, next) => {
-  const header = req.headers["authorization"];
+import jwt from 'jsonwebtoken';
 
-  if (typeof header !== "undefined") {
-    const bearer = header.split(" ");
+const verifyToken = (req, res, next) => {
+  const checkHeader = req.headers.authorization;
+
+  if (typeof checkHeader !== 'undefined') {
+    const bearer = checkHeader.split(' ');
     const token = bearer[1];
-
-    req.token = token;
-    next();
+    jwt.verify(token, 'secretkey', (err, encoded) => {
+      if (err) {
+        res.status(401).json({
+          status: 401,
+          data: 'Unauthorized access',
+        });
+      }
+      req.encoded = encoded;
+      next();
+    });
   } else {
-    //If header is undefined return Forbidden (403)
-    res.sendStatus(403);
+    res.status(403).json();
   }
 };
 
-export default checkToken;
+export default verifyToken;
