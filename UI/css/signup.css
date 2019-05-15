@@ -18,7 +18,7 @@ a {
   color: #ffff;
   text-decoration: none;
 }
-a:hover {
+ul li a:hover {
   color: rgb(250, 226, 10);
 }
 .mainheader nav ul {
