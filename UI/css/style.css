@@ -289,6 +289,14 @@ table .button-deny {
     max-width: 100%;
     height: 200px;
   }
+  h1 {
+    font-size: 50px;
+    margin-left: 25px;
+    margin-top: 10px;
+    color: #acacac;
+    float: left;
+    display: inline-block;
+  }
   .leftContent img {
     margin-top: 5px;
     height: 150px;
