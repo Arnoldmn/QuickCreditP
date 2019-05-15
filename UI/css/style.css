@@ -311,7 +311,7 @@ table .button-deny {
     text-align: center;
   }
   ul li a:hover {
-    background-color: rgb(250, 226, 10);
+    background-color: rgba(250, 66, 10, 0.247);
   }
   .how-heading {
     margin: 5px;
