@@ -310,8 +310,10 @@ table .button-deny {
     width: 100%;
     text-align: center;
   }
-  a:hover {
-    color: rgb(250, 226, 10);
+  ul li a:hover {
+    background-color: rgb(250, 226, 10);
+    height: 20px;
+    border-radius: 5px;
   }
   .how-heading {
     margin: 5px;
