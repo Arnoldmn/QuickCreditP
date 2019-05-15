@@ -69,9 +69,7 @@ h2 {
 }
 
 .how-heading {
-  text-align: center;
-  color: #000305;
-  font-size: 17px;
+  margin: 5px;
 }
 .mainContent {
   line-height: 20px;
