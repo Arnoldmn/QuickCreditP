@@ -27,8 +27,6 @@ a {
 }
 ul li a:hover {
   color: rgb(250, 226, 10);
-  height: 20px;
-  border-radius: 5px;
 }
 .mainheader nav ul {
   text-align: center;
@@ -314,8 +312,6 @@ table .button-deny {
   }
   ul li a:hover {
     background-color: rgb(250, 226, 10);
-    height: 20px;
-    border-radius: 5px;
   }
   .how-heading {
     margin: 5px;
