@@ -291,8 +291,7 @@ table .button-deny {
   }
   h1 {
     font-size: 50px;
-    margin-left: 25px;
-    margin-top: 10px;
+    text-align: center;
     color: #acacac;
     float: left;
     display: inline-block;
