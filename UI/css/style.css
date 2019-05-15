@@ -310,18 +310,13 @@ table .button-deny {
   .leftContent,
   .column1,
   .column {
-    float: left;
     width: 100%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
     padding: 2% 3%;
   }
 
   .rightContent caption {
     font-size: 14px;
-  }
-
-  .mainFooter {
-    width: 100%;
   }
 }
