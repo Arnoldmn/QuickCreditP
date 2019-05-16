@@ -14,11 +14,9 @@
     "dev-start": "babel-watch ./server/server.js",
     "start": "nodemon --exec babel-node ./server/server.js"
   },
-  "author": "Mumbere7",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
-    "coveralls": "^3.0.3",
     "express": "^4.16.4",
     "jade": "^1.11.0",
     "joi": "^14.3.1",
@@ -43,6 +41,7 @@
     "@babel/register": "^7.4.4",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2",

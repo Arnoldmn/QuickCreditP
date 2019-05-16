@@ -1,3 +1,4 @@
+
 import express from 'express';
 import { json, urlencoded } from 'body-parser';
 import swaggerUi from 'swagger-ui-express';
@@ -9,7 +10,6 @@ const app = express();
 const PORT = process.env.PORT || 7000;
 app.use(json());
 app.use(urlencoded({ extended: true }));
-
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(userRoute);
@@ -22,6 +22,11 @@ app.get('/', (req, res) => {
 });
 app.listen(PORT, () => {
   console.log(`App running on ${PORT}`);
+
+
+app.listen(PORT, () => {
+    console.log(`App running on ${PORT}`);
+
 });
 
 export default app;
