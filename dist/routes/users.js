@@ -28,4 +28,3 @@ router.post('/api/v1/auth/signin', _users["default"].signin);
 router.put('/api/v1/users/:email/verify', _authorize["default"], _users["default"].UserIsVerified);
 var _default = router;
 exports["default"] = _default;
-//# sourceMappingURL=users.js.map

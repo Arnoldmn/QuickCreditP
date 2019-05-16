@@ -39,4 +39,3 @@ app.listen(PORT, function () {
 });
 var _default = app;
 exports["default"] = _default;
-//# sourceMappingURL=server.js.map

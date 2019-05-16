@@ -22,4 +22,3 @@ describe('Test if routes exist', function () {
     });
   });
 });
-//# sourceMappingURL=route-test.js.map

@@ -27,4 +27,3 @@ describe('Test database inputs', function () {
     });
   });
 });
-//# sourceMappingURL=user-wrong.js.map

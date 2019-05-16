@@ -298,4 +298,3 @@ function () {
 var loansController = new LoansController();
 var _default = loansController;
 exports["default"] = _default;
-//# sourceMappingURL=loans.js.map

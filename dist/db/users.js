@@ -34,4 +34,3 @@ var users = [{
 }];
 var _default = users;
 exports["default"] = _default;
-//# sourceMappingURL=users.js.map

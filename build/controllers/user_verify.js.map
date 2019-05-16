@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../server/controllers/user_verify.js"],"names":[],"mappings":"AAAA","sourcesContent":["/* import usersController from './users';\nimport users from '../db/users';\n\nclass VerifyController {\n\n}\nconst verify = new VerifyController();\nexport default verify; */\n"],"file":"user_verify.js"}

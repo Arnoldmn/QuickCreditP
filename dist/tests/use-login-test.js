@@ -51,4 +51,3 @@ describe('User sign in', function () {
     });
   });
 });
-//# sourceMappingURL=use-login-test.js.map

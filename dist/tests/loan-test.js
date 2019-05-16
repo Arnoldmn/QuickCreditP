@@ -174,4 +174,3 @@ describe('Test loan endpoints', function () {
     });
   });
 });
-//# sourceMappingURL=loan-test.js.map

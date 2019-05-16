@@ -56,4 +56,3 @@ describe('User sign up', function () {
     });
   });
 });
-//# sourceMappingURL=user-signup-test.js.map

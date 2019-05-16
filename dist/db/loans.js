@@ -45,4 +45,3 @@ var _default = {
   repayments: repayments
 };
 exports["default"] = _default;
-//# sourceMappingURL=loans.js.map

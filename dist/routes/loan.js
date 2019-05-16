@@ -33,4 +33,3 @@ router.put('/api/v1/loans/:id', _loans["default"].loanStatus);
 router.patch('/api/v1/loans/:id', _authorize["default"], _loans["default"].updatedLoanRepayment);
 var _default = router;
 exports["default"] = _default;
-//# sourceMappingURL=loan.js.map

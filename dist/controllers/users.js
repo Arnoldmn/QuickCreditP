@@ -177,4 +177,3 @@ function () {
 var usersController = new UsersController();
 var _default = usersController;
 exports["default"] = _default;
-//# sourceMappingURL=users.js.map
