@@ -1,5 +1,7 @@
+
 [![Coverage Status](https://coveralls.io/repos/github/Mumbere7/QuickCreditP/badge.svg?branch=develop)](https://coveralls.io/github/Mumbere7/QuickCreditP?branch=develop)
 [![Build Status](https://travis-ci.com/Mumbere7/QuickCreditP.svg?branch=develop)](https://travis-ci.com/Mumbere7/QuickCreditP)
+=======
 
 # quickCredit
 
@@ -29,6 +31,7 @@ This application should allow user to borrow money from our services at an affor
 
 > > To view a live demo of this project go to https://mumbere7.github.io/QuickCreditP/
 > > Give your feed back to the admin in case of any changes
+
 
 ## To have this project just use
 
