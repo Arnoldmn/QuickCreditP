@@ -66,7 +66,7 @@ class UsersController {
             lastname: user.lastname,
             password: user.password,
             address: user.address,
-            status: user.status === 'rejected' || 'approved',
+            status: user.status = 'unverified',
             isAdmin: user.isAdmin === true || false,
           },
         };
