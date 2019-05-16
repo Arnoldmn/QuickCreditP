@@ -1,5 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/Mumbere7/quickCredit/badge.svg?branch=develop)](https://coveralls.io/github/Mumbere7/quickCredit?branch=develop)
-[![Build Status](https://travis-ci.com/Mumbere7/quickCredit.svg?branch=master)](https://travis-ci.com/Mumbere7/quickCredit)
+
 
 # quickCredit
 
@@ -27,7 +26,7 @@ This application should allow user to borrow money from our services at an affor
 6. Admin approve/reject loan application.
 7. Admin post loan repayment transaction in favour of a client.
 
-> > To view a live demo of this project go to https://mumbere7.github.io/quickCredit/
+> > To view a live demo of this project go to https://mumbere7.github.io/QuickCreditP/
 > > Give your feed back to the admin in acse of any changes
 
 # <<<<<<< HEAD
@@ -36,7 +35,6 @@ This application should allow user to borrow money from our services at an affor
 
 1. git clone [project-name]
 2. for a better view i recommend google chrome
-   > > > > > > > 85baa567a588ac1307bfc180dad4634a4355a578
 
 # quickCredit
 
