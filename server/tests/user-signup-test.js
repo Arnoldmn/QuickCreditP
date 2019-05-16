@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import chaiHttp from "chai-http";
 import chai from "chai";
 import app from "../server";
@@ -9,9 +8,7 @@ const { expect } = chai;
 
 describe("User sign up", () => {
   it("Should return a 201 and confirm user a valid input", done => {
-    /**
-     * request new user input
-     */
+
     const newUser = {
       email: "johndoe@quicredit.com",
       firstname: "john",
@@ -19,9 +16,7 @@ describe("User sign up", () => {
       password: "secret",
       addres: "Gisozi"
     };
-    /**
-     * send  user request
-     */
+
     chai
       .request(app)
       .post("/api/v1/auth/signup")
