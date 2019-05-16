@@ -36,4 +36,21 @@ describe('User sign up', () => {
         done();
       });
   });
+
+  it('Should return error 401 when email is already registered', (done) => {
+    const newUser = {
+      email: 'johndoe@quicredit.com',
+      firstname: 'john',
+      lastname: 'doe',
+      password: 'secret',
+      address: 'Gisozi',
+    };
+    chai.request(app).post('/api/v1/auth/signup')
+      .send(newUser)
+      .end((req, res) => {
+        expect(res).to.have.status(409);
+        expect(res.body.error).to.be.equal('User already exists');
+        done();
+      });
+  });
 });

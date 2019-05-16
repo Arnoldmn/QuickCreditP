@@ -14,7 +14,12 @@ app.use(urlencoded({ extended: true }));
 
 app.use(userRoute);
 app.use(loanRoute);
-
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 200,
+    message: 'Get loans with a good interest',
+  });
+});
 app.listen(PORT, () => {
   console.log(`App running on ${PORT}`);
 });
