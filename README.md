@@ -27,16 +27,13 @@ This application should allow user to borrow money from our services at an affor
 6. Admin approve/reject loan application.
 7. Admin post loan repayment transaction in favour of a client.
 
-> > To view a live demo of this project go to https://mumbere7.github.io/quickCredit/
-> > Give your feed back to the admin in acse of any changes
-
-# <<<<<<< HEAD
+> > To view a live demo of this project go to https://mumbere7.github.io/QuickCreditP/
+> > Give your feed back to the admin in case of any changes
 
 ## To have this project just use
 
 1. git clone [project-name]
 2. for a better view i recommend google chrome
-   > > > > > > > 85baa567a588ac1307bfc180dad4634a4355a578
 
 # quickCredit
 
