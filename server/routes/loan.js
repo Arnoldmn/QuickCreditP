@@ -1,6 +1,6 @@
 import express from 'express';
 import loansController from '../controllers/loans';
-import usersController from '../controllers/users';
+// import usersController from '../controllers/users';
 import authorize from '../middleware/authorize';
 
 const router = express.Router();

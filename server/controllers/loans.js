@@ -73,8 +73,8 @@ class LoansController {
       loan => loan.id === parseInt(req.params.id, 10),
     );
     if (!loanDetails) {
-      return res.status(404).json({
-        status: 404,
+      return res.status(400).json({
+        status: 400,
         error: 'Loan application not found',
       });
     }
@@ -98,8 +98,8 @@ class LoansController {
       loan => loan.status === statusReq && loan.repaid === repaidReq,
     );
     if (!info) {
-      return res.status(404).json({
-        status: 404,
+      return res.status(403).json({
+        status: 403,
         data: 'Loan already settled',
       });
     }
@@ -124,8 +124,8 @@ class LoansController {
       loan => loan.status === statusReq && loan.repaid === repaidReq,
     );
     if (!info) {
-      return res.status(404).json({
-        status: 404,
+      return res.status(403).json({
+        status: 403,
         data: 'Loan not found',
       });
     }
@@ -148,8 +148,8 @@ class LoansController {
       loan => loan.id === parseInt(req.params.id, 10),
     );
     if (!singleLoan) {
-      return res.status(404).json({
-        status: 404,
+      return res.status(403).json({
+        status: 403,
         error: "Loan not found"
       });
     }
