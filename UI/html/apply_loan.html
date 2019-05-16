@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Apply for loan</title>
+  <link rel="stylesheet" href="../css/signup.css" />
+  <style></style>
+
+  <body class="body">
+    <header class="mainheader">
+      <h1><a href="#">QuickCredit</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="loan_history.html">History</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <form class="regform" action="./paid_loan.html" method="POST">
+      <div>
+        Apply For Loan
+        <hr />
+        <p>
+          <input
+            placeholder="ID number..."
+            name="idnum"
+            id="idnum"
+            type="text"
+          />
+        </p>
+        <input
+          placeholder="interest rate %"
+          name="lrate"
+          id="intrate"
+          type="text"
+        />
+        <p>
+          <input
+            placeholder="Place of work..."
+            name="pwork"
+            id="pwork"
+            type="text"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="loan duration"
+            name="duration"
+            id="duration"
+            type="date"
+          />
+        </p>
+
+        <p>
+          <select name="reason" id="reason">
+            <option value="">What's the money for?</option>
+            <option value="">Tuition fees</option>
+            <option value="">Home renovation</option>
+            <option value="">Medical expenses</option>
+            <option value="">Family emergencies</option>
+            <option value="">Capital boosting</option>
+          </select>
+        </p>
+        <p>
+          <select name="amount" id="amount">
+            <option value="">Amount?</option>
+            <option value="">USD 4000</option>
+            <option value="">USD 5000</option>
+            <option value="">USD 6000</option>
+            <option value="">USD 7000</option>
+            <option value="">USD 8000</option>
+          </select>
+        </p>
+      </div>
+      <div style="overflow:auto;">
+        <div style="float:right;">
+          <button type="button" id="nextBtn" onclick="populateTable()">
+            Apply
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script src="signupjs.js"></script>
+    <footer class="mainFooter">
+      <p>Copyright &copy; 2019 QuickCredit Co.</p>
+    </footer>
+  </body>
+</html>
