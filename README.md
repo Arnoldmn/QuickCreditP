@@ -1,5 +1,5 @@
-[![Coverage Status](https://coveralls.io/repos/github/Mumbere7/quickCredit/badge.svg?branch=develop)](https://coveralls.io/github/Mumbere7/quickCredit?branch=develop)
-[![Build Status](https://travis-ci.com/Mumbere7/quickCredit.svg?branch=master)](https://travis-ci.com/Mumbere7/quickCredit)
+[![Coverage Status](https://coveralls.io/repos/github/Mumbere7/QuickCreditP/badge.svg?branch=develop)](https://coveralls.io/github/Mumbere7/QuickCreditP?branch=develop)
+[![Build Status](https://travis-ci.com/Mumbere7/QuickCreditP.svg?branch=develop)](https://travis-ci.com/Mumbere7/QuickCreditP)
 
 # quickCredit
 

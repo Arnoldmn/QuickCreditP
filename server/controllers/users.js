@@ -25,8 +25,8 @@ class UsersController {
     const userExists = users.find(user => user.email === email);
 
     if (userExists) {
-      res.status(400).json({
-        status: 400,
+      res.status(409).json({
+        status: 409,
         error: 'User already exists',
       });
     }
