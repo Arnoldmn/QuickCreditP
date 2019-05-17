@@ -36,7 +36,7 @@ class UsersController {
     user.lastname = lastname;
     user.password = password;
     user.address = address;
-    user.status = 'pending' || 'approved';
+    user.status = 'pending';
     user.isAdmin = true || false;
     users.push(user);
     jwt.sign(

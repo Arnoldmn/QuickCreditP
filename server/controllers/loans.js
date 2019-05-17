@@ -24,17 +24,17 @@ class LoansController {
     } = req.body;
     const loanApplicant = users.find(_user => _user.userId === req.body.userId);
 
-    const loan = [{}];
+    const loan = {};
     loan.loanId = loans.id;
     loan.email = email;
     loan.createdOn = new Date();
-    loan.status = status === 'rejected' || 'approved';
+    loan.status = status === 'pending';
     loan.repaid = parseFloat(repaid);
     loan.tenor = parseFloat(tenor);
     loan.amount = parseFloat(amount);
     loan.installment = parseFloat(installment);
     loan.balance = parseFloat(balance);
-    loan.interest = parseFloat(amount * 5) / 100;
+    loan.interest = parseFloat((amount * 5) / 100);
 
     loan.push(loan);
     const resp = {
