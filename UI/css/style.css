@@ -67,7 +67,7 @@ h2 {
   margin-top: 5px;
   font-size: 17px;
 }
-.admin-nav a::first-letter{
+.admin-nav ul li a::first-letter{
   text-transform: uppercase;
 }
 .how-heading {
