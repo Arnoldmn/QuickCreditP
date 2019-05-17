@@ -2,41 +2,42 @@ export const loans = [
     {
         id: 1,
         email: 'user1@quickcredit.com',
-        createdOn: '12-05-2018',
+        createdOn: Date.now(),
         status: 'pending',
         repaid: false,
-        tenor: '3000',
-        amount: '20000',
-        paymentInstallment: '2000',
-        balance: '18000',
+        tenor: 4,
+        amount: 20000,
+        paymentInstallment: 2000,
+        balance: 18000,
         interest: '5%',
     },
+
     {
-        id: 1,
+        id: 2,
         email: 'user2@quickcredit.com',
-        createdOn: '12-05-2018',
-        status: 'approved',
+        createdOn: Date.now(),
+        status: 'Unverified',
         repaid: true,
-        tenor: '3000',
-        amount: '20000',
-        paymentInstallment: '2',
-        balance: '0',
+        tenor: 3000,
+        amount: 3,
+        paymentInstallment: 2,
+        balance: 0,
         interest: '5%',
-    },
+    }
 ];
 
 export const repayments = [
     {
-        id: 1,
-        createdOn: '12-05-2018',
+        id: 2,
+        createdOn: Date.now(),
         loanId: 1,
-        amount: '20000',
+        amount: 20000,
     },
     {
         id: 2,
-        createdOn: '12-05-2018',
+        createdOn: Date.now(),
         loanId: 3,
-        amount: '20000',
+        amount: 20000,
     },
 ];
 

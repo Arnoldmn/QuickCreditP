@@ -3,18 +3,12 @@ import { loans, repayments } from '../db/loans';
 
 class LoansController {
   getAllLoans(req, res) {
-    res.status(200).json({
+    return res.status(200).json({
       status: 200,
       data: loans,
     });
   }
 
-  /**
-   *
-   * @param {*} req
-   * @param {*} res
-   * loan application
-   */
   applyLoan(req, res) {
     const {
       email,
@@ -58,38 +52,25 @@ class LoansController {
       },
     };
 
-    res.status(200).json(resp);
+    return res.status(200).json(resp);
   }
-
-  /**
-   *
-   * @param {*} req
-   * @param {*} res
-   * specific loan
-   */
 
   singleLoan(req, res) {
-    const loanDetails = loans.find(
-      loan => loan.id === parseInt(req.params.id, 10),
-    );
-    if (!loanDetails) {
-      return res.status(400).json({
-        status: 400,
-        error: 'Loan application not found',
-      });
-    }
-    res.status(200).json({
-      status: 200,
-      data: loanDetails,
+    const id = parseInt(req.params.id, 10);
+    loans.map((loan) => {
+      if (loan.id === id) {
+        return res.status(200).json({
+          success: 'true',
+          message: 'loan retrieved successfully',
+          loan,
+        });
+      }
+    });
+    return res.status(404).send({
+      success: 'false',
+      message: 'loan does not exist',
     });
   }
-
-  /**
-   *
-   * @param {*} req
-   * @param {*} res
-   * unsettled loans
-   */
 
   unSettledLoan(req, res) {
     const statusReq = req.query.status;
@@ -111,12 +92,6 @@ class LoansController {
     });
   }
 
-  /**
-   *
-   * @param {*} req
-   * @param {*} res
-   * fully settled loans
-   */
   fullySettledLoans(req, res) {
     const statusReq = req.query.status;
     const repaidReq = req.query.statusReq;
@@ -137,12 +112,6 @@ class LoansController {
     });
   }
 
-  /**
-   *
-   * @param {*} res
-   * @param {*} req
-   * Loan repayment endpoint
-   */
   loanRepayment(req, res) {
     const singleLoan = loans.find(
       loan => loan.id === parseInt(req.params.id, 10),
@@ -150,7 +119,7 @@ class LoansController {
     if (!singleLoan) {
       return res.status(403).json({
         status: 403,
-        error: "Loan not found"
+        error: 'Loan not found',
       });
     }
     const newRepayment = {
@@ -197,28 +166,16 @@ class LoansController {
     });
   }
 
-  /**
-   *
-   * @param {*} res
-   * @param {*} req
-   * Loan history endpoint
-   */
   loanHistory(req, res) {
     const loanRepayment = [loans];
     const lona_history = loans.filter(email => email);
 
-    res.status(200).json({
+    return res.status(200).json({
       status: 200,
       data: loan,
     });
   }
 
-  /**
-   *
-   * @param {*} res
-   * @param {*} req
-   * Loan can be approved or rejected
-   */
   loanStatus(req, res) {
     const { loanApplication } = req.params;
 
@@ -238,5 +195,6 @@ class LoansController {
     });
   }
 }
+
 const loansController = new LoansController();
 export default loansController;
