@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import chaiHttp from 'chai-http';
 import chai from 'chai';
-import app from '../server';
+import app from '../../server';
 
 chai.should();
 chai.use(chaiHttp);
@@ -56,6 +56,5 @@ describe('User sign in', () => {
             });
 
     });
-
 
 });

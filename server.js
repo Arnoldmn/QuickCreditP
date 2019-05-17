@@ -1,9 +1,9 @@
 import express from 'express';
 import { json, urlencoded } from 'body-parser';
 import swaggerUi from 'swagger-ui-express';
-import userRoute from './routes/users';
-import loanRoute from './routes/loan';
-import swaggerDocument from './routes/doc/swagger.json';
+import userRoute from './server/routes/users';
+import loanRoute from './server/routes/loan';
+import swaggerDocument from './server/routes/doc/swagger.json';
 
 const app = express();
 const PORT = process.env.PORT || 7000;

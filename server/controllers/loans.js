@@ -10,6 +10,7 @@ class LoansController {
   }
 
   applyLoan(req, res) {
+    res.json(req.body);
     const {
       email,
       createdOn,
@@ -43,7 +44,7 @@ class LoansController {
         email: loans.email,
         createdOn: new Date(),
         status: loanApplicant.status,
-        repaid: loans.repaid || true || false,
+        repaid: loans.repaid,
         tenor: parseFloat(loans.tenor),
         amount: parseFloat(loans.amount),
         installment: parseFloat(loans.installment),
@@ -167,9 +168,6 @@ class LoansController {
   }
 
   loanHistory(req, res) {
-    const loanRepayment = [loans];
-    const lona_history = loans.filter(email => email);
-
     return res.status(200).json({
       status: 200,
       data: loan,

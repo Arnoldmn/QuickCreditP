@@ -120,8 +120,8 @@ class UsersController {
   UserIsVerified(req, res) {
     const user = users.find(user => user.email === req.params.email);
     if (!user) {
-      return res.status(201).json({
-        status: 404,
+      return res.status(401).json({
+        status: 401,
         error: 'User not found',
       });
     }
