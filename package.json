@@ -11,7 +11,7 @@
     "build": "babel server --out-dir build",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls ",
     "dev-start": "babel-watch ./server/server.js",
-    "start": "nodemon --exec babel-node ./server.js"
+    "start": "node ./server.js"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
