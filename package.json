@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha ./server/tests/*.js --exit --require esm",
-    "transpile": "babel server --out-dir dist",
+    "build": "babel server --out-dir build",
     "coverage": "nyc --reporter=html --reporter=text",
     "dev-start": "babel-watch ./server/server.js",
     "start": "nodemon --exec babel-node ./server/server.js"
